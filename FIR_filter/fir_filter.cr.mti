@@ -1,0 +1,29 @@
+/home/pulp/thietkeso/FIR_filter/fir_n.sv {1 {vlog -work work -vopt -sv -stats=none /home/pulp/thietkeso/FIR_filter/fir_n.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module fir_n
+
+Top level modules:
+	fir_n
+
+} {} {}} /home/pulp/thietkeso/FIR_filter/tapped_delay_block.sv {1 {vlog -work work -vopt -sv -stats=none /home/pulp/thietkeso/FIR_filter/tapped_delay_block.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module tapped_delay_block
+
+Top level modules:
+	tapped_delay_block
+
+} {} {}} /home/pulp/thietkeso/FIR_filter/clk_divider.sv {1 {vlog -work work -vopt -sv -stats=none /home/pulp/thietkeso/FIR_filter/clk_divider.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module clk_divider
+
+Top level modules:
+	clk_divider
+
+} {} {}} /home/pulp/thietkeso/FIR_filter/test_fir_n.sv {1 {vlog -work work -vopt -sv -stats=none /home/pulp/thietkeso/FIR_filter/test_fir_n.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module test_fir_n
+
+Top level modules:
+	test_fir_n
+
+} {} {}}

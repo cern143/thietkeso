@@ -1,0 +1,43 @@
+|day
+rst_n => month_en~reg0.ACLR
+rst_n => day_tens[0]~reg0.ACLR
+rst_n => day_tens[1]~reg0.ACLR
+rst_n => day_ones[0]~reg0.PRESET
+rst_n => day_ones[1]~reg0.ACLR
+rst_n => day_ones[2]~reg0.ACLR
+rst_n => day_ones[3]~reg0.ACLR
+clk => month_en~reg0.CLK
+clk => day_tens[0]~reg0.CLK
+clk => day_tens[1]~reg0.CLK
+clk => day_ones[0]~reg0.CLK
+clk => day_ones[1]~reg0.CLK
+clk => day_ones[2]~reg0.CLK
+clk => day_ones[3]~reg0.CLK
+set_ones[0] => day_ones.DATAB
+set_ones[0] => Equal0.IN3
+set_ones[1] => day_ones.DATAB
+set_ones[1] => Equal0.IN2
+set_ones[2] => day_ones.DATAB
+set_ones[2] => Equal0.IN1
+set_ones[3] => day_ones.DATAB
+set_ones[3] => Equal0.IN0
+set_tens[0] => day_tens.DATAB
+set_tens[0] => Equal1.IN1
+set_tens[1] => day_tens.DATAB
+set_tens[1] => Equal1.IN0
+day_en => ~NO_FANOUT~
+day_ones[0] <= day_ones[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day_ones[1] <= day_ones[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day_ones[2] <= day_ones[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day_ones[3] <= day_ones[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day_tens[0] <= day_tens[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day_tens[1] <= day_tens[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lastday_ones[0] => Equal3.IN3
+lastday_ones[1] => Equal3.IN2
+lastday_ones[2] => Equal3.IN1
+lastday_ones[3] => Equal3.IN0
+lastday_tens[0] => Equal2.IN1
+lastday_tens[1] => Equal2.IN0
+month_en <= month_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,56 @@
+`timescale 1ns/1ps
+parameter CLK_PERIOD = 2;
+
+// Signals
+wire cnt;
+reg clk;
+reg rst;
+wire y;
+
+module btn_generator(
+    input clk,          // Clock signal
+    output reg btn      // btn signal
+);
+
+reg [3:0] counter;    // Counter for button debounce
+
+always @(posedge clk) begin
+	if (counter < 4'd3) counter <= counter + 1;
+	else
+		begin
+		counter = 4'd0;
+		btn = ~btn;    // Toggle button signal every 65536 clock cycles
+		end
+end
+
+endmodule
+
+btn_generator btn (
+	.clk(clk)
+	.btn(cnt)
+);
+
+module btn_count_tb;
+
+// Instantiate the module under test
+fsm dut (
+	.cnt(cnt),
+	.clk(clk),
+	.rst(rst),
+	.y(y)
+);
+
+// Clock generation
+always #((CLK_PERIOD/2)) clk = ~clk;
+
+// Initial stimulus
+initial begin
+	//Initialize input
+	cnt = 0;
+	rst = 1;
+	clk = 0;
+	// Reset FSM
+	#1 rst_n = 0;
+
+
+

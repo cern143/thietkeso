@@ -1,0 +1,34 @@
+module day (rst_n, clk, set_ones, set_tens, day_en, day_ones, day_tens, lastday_ones, lastday_tens);
+
+    input rst_n, clk, day_en;
+    input [3:0] set_ones;
+	input [1:0] sec_tens;
+	input [3:0] lastday_ones;
+    input [1:0] lastday_tens;
+    output reg [3:0] day_ones;
+    output reg [1:0] day_tens;
+
+always @(posedge clk or negedge rst_n) begin
+    if(~rst_n) begin
+        day_ones <= 1;
+        day_tens <= 0;
+    end
+    else begin 
+        if(set_ones != 3'd0) hrs_ones <= set_ones;
+        if(set_tens != 1'd0) hrs_tens <= set_tens;
+    end
+    else begin
+        if (day_tens = lastday_tens || day_ones = lastday_ones) begin
+            day_ones <= 1;
+            day_tens <= 0;
+        end
+        else if (day_ones == 4'd9) begin
+            day_ones <= 0;
+            day_tens <= day_tens + 1;
+        end
+        else day_ones = day_ones + 1;
+    end
+end
+endmodule
+
+

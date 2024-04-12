@@ -1,0 +1,13 @@
+`define SEC_CNT = 26`h2FAF07F
+module sec_cnt (
+    input clk, rst_n,
+    output reg [25:0] clk_cnt
+);
+    
+always @(posedge clk) begin
+	if (~rst_n || (clk_cnt == `SEC_CNT))
+		clk_cnt <= 0;
+	else 
+		clk_cnt <= clk_cnt +1;
+end
+endmodule

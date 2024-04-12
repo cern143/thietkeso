@@ -1,0 +1,23 @@
+module alu(
+		input [3:0] a,b,
+		input [1:0] sel,
+		output reg [7:0] out,
+		output co,
+);
+		always @(a,b,sel)
+			begin
+				if (sel[0]) {
+					if (sel[1]) {
+						out = ~a;
+					}
+					else out = a*b;
+				}
+				else {
+					if (sel[1]) {
+						out = a-b;
+					}
+					else {
+						out = a+b;
+					}
+			 end
+endmodule

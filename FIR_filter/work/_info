@@ -1,0 +1,140 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/pulp
+T_opt
+!s110 1712568945
+VFL<mnXjDbCkiSD[mU5X<S0
+04 10 4 work test_fir_n fast 0
+=1-484d7ed50bcc-6613ba70-f3be3-7155
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+R0
+vasync_reg
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z3 !s110 1712568495
+!i10b 1
+!s100 =BSE@ONn@KYG`bzY3jen40
+IS4ike_lGnb2FcQ9bkF][Y3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 async_reg_sv_unit
+S1
+Z5 d/home/pulp/thietkeso/FIR_filter
+Z6 w1712567376
+8/home/pulp/thietkeso/FIR_filter/async_reg.sv
+F/home/pulp/thietkeso/FIR_filter/async_reg.sv
+L0 9
+Z7 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z8 !s108 1712568495.000000
+!s107 /home/pulp/thietkeso/FIR_filter/async_reg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/pulp/thietkeso/FIR_filter/async_reg.sv|
+!i113 0
+Z9 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vclk_divider
+R2
+R3
+!i10b 1
+!s100 nGD96PFQZJkLT3ogC>QgC0
+I2]cP1edIEjbk^Pm;HnXUk3
+R4
+!s105 clk_divider_sv_unit
+S1
+R5
+R6
+8/home/pulp/thietkeso/FIR_filter/clk_divider.sv
+F/home/pulp/thietkeso/FIR_filter/clk_divider.sv
+L0 4
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/pulp/thietkeso/FIR_filter/clk_divider.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/pulp/thietkeso/FIR_filter/clk_divider.sv|
+!i113 0
+R9
+R1
+vfir_n
+R2
+R3
+!i10b 1
+!s100 FmY69o[`[a8O<o1Z<PK_62
+IYPzfS;NlREifKM2E[IQai3
+R4
+!s105 fir_n_sv_unit
+S1
+R5
+R6
+8/home/pulp/thietkeso/FIR_filter/fir_n.sv
+F/home/pulp/thietkeso/FIR_filter/fir_n.sv
+L0 4
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/pulp/thietkeso/FIR_filter/fir_n.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/pulp/thietkeso/FIR_filter/fir_n.sv|
+!i113 0
+R9
+R1
+vtapped_delay_block
+R2
+!s110 1712569090
+!i10b 1
+!s100 OA3;g7RloF9C84[FO?di;0
+INQJF>];PUEQ`7TF<IB;jJ3
+R4
+!s105 tapped_delay_block_sv_unit
+S1
+R5
+w1712567655
+8/home/pulp/thietkeso/FIR_filter/tapped_delay_block.sv
+F/home/pulp/thietkeso/FIR_filter/tapped_delay_block.sv
+L0 4
+R7
+r1
+!s85 0
+31
+!s108 1712569090.000000
+!s107 /home/pulp/thietkeso/FIR_filter/tapped_delay_block.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/pulp/thietkeso/FIR_filter/tapped_delay_block.sv|
+!i113 0
+R9
+R1
+vtest_fir_n
+R2
+!s110 1712568928
+!i10b 1
+!s100 ljmn9n?6RmhTXTe8;TP;Z1
+IlL9oiDmWAJne95m1>gLfG0
+R4
+!s105 test_fir_n_sv_unit
+S1
+R5
+w1712568764
+8/home/pulp/thietkeso/FIR_filter/test_fir_n.sv
+F/home/pulp/thietkeso/FIR_filter/test_fir_n.sv
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1712568928.000000
+!s107 /home/pulp/thietkeso/FIR_filter/test_fir_n.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/pulp/thietkeso/FIR_filter/test_fir_n.sv|
+!i113 0
+R9
+R1

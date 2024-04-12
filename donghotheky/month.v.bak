@@ -1,0 +1,35 @@
+module month(rst_n, clk, set_ones, set_tens, month_en, month_ones, month_tens);
+
+    input rst_n, clk, month_en;
+	input [3:0] set_ones;
+	input [1:0] sec_tens;
+    output reg [3:0] month_ones;
+    output reg [1:0] month_tens;
+
+always @(posedge clk or negedge rst_n) begin
+	if (~rst_n)
+	       month_ones <= 3'd0;
+	else if(set_ones != 3'd0) month_ones <= set_ones;
+	else if (month_en)
+	begin
+		if (month_ones == 3'd9 || ({month_tens,month_ones} == 6'b010010)) // b10 = d1; 4'b0010 = d2
+			month_ones <= 3'd0;
+		else
+			month_ones <= month_ones +1;
+	end
+end
+
+always @(posedge clk or negedge rst_n) begin
+	if (~rst_n)
+	       month_tens <= 1'd0;
+	else if(set_tens != 1'd0) month_tens <= set_tens;
+	else if (month_en)
+	begin
+		if ({month_tens,month_ones} == 6'b010010)  
+			month_tens <= 1'd0;
+		else if (month_ones == 3'd9)
+			month_tens <= month_tens + 1;
+	end
+end
+
+endmodule

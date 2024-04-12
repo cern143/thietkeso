@@ -1,0 +1,33 @@
+module min(rst_n, clk, set_ones, set_tens, min_en, min_ones, min_tens);
+
+    input rst_n, clk, min_en;
+	input [3:0] set_ones;
+	input [2:0] sec_tens;
+    output reg [3:0] min_ones;
+    output reg [2:0] min_tens;
+always @(posedge clk or negedge rst_n) begin
+	if (~rst_n)
+	       min_ones <= 3'd0;
+	else if(set_ones != 3'd0) min_ones <= set_ones;
+	else if (min_en)
+	begin
+		if (min_ones == 3'd9)
+			min_ones <= 3'd0;
+		else
+			min_ones <= min_ones +1;
+	end
+end
+
+always @(posedge clk or negedge rst_n) begin
+	if (~rst_n)
+	       min_tens <= 2'd0;
+	else if(set_tens != 2'd0) min_tens <= set_tens;
+	else if (min_en && (min_ones == 3'd9)) 
+	begin
+		if (min_tens == 2'd5)
+			min_tens <= 2'd0;
+		else
+			min_tens <= min_tens +1;
+	end
+end
+endmodule
