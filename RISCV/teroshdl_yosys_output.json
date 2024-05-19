@@ -1,0 +1,148 @@
+{
+  "creator": "Yosys 0.41 (git sha1 c1ad37779, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)",
+  "modules": {
+    "pc": {
+      "attributes": {
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "pc.v:1.1-13.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst_n": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "addr": {
+          "direction": "output",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+        "$add$pc.v:10$3": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "pc.v:10.13-10.19"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 6, 7, 8, 9, 10, 11 ],
+            "B": [ "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ]
+          }
+        },
+        "$logic_not$pc.v:9$2": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "pc.v:9.5-9.11"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 44 ]
+          }
+        },
+        "$procdff$4": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "0",
+            "ARST_VALUE": "0000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000111"
+          },
+          "attributes": {
+            "src": "pc.v:8.1-11.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 12, 13, 14, 15, 16, 17, 18 ],
+            "Q": [ 5, 6, 7, 8, 9, 10, 11 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\pc[6:0]": {
+          "hide_name": 1,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "pc.v:8.1-11.4"
+          }
+        },
+        "$add$pc.v:10$3_Y": {
+          "hide_name": 1,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+          "attributes": {
+            "src": "pc.v:10.13-10.19"
+          }
+        },
+        "$logic_not$pc.v:9$2_Y": {
+          "hide_name": 1,
+          "bits": [ 44 ],
+          "attributes": {
+            "src": "pc.v:9.5-9.11"
+          }
+        },
+        "addr": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "pc.v:4.8-4.12"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "pc.v:3.7-3.10"
+          }
+        },
+        "pc": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11 ],
+          "upto": 1,
+          "attributes": {
+            "src": "pc.v:6.11-6.13"
+          }
+        },
+        "rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "pc.v:3.12-3.17"
+          }
+        }
+      }
+    }
+  }
+}

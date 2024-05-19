@@ -17,7 +17,7 @@ begin
 	s0: 
         begin
 			if (x) nextstate = s1;
-			else nextstate=s0;
+			else nextstate = s0;
 			y = 0;
         end
 	s1: 
